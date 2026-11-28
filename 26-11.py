@@ -8,5 +8,6 @@ res = []
 for i in range(len(data)-1):
     if data[i] != data[i+1]:
         res.append((data[i], data.count(data[i])))
+res = sorted(res, reverse=True, key=lambda x: x[1])
 for i in res:
     print(i)
